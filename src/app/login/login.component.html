@@ -5,10 +5,10 @@
         <span>Login</span>
         <hr>
         <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="user" class="img-box"><br>
-        <input type="text"  class="box-login-input box-login-user"     placeholder="User o gmail"><br>
-        <input type="password"  class="box-login-input box-login-Password" placeholder="Password"><br>
-        <button class="btn-login "> login </button><br>
-        <button class="btn-register "> register </button>
+        <input type="text"      class="box-login-input box-login-user"     [(ngModel)]="usario"   placeholder="User o gmail"><br>
+        <input type="password"  class="box-login-input box-login-Password"  [(ngModel)]="password" placeholder="password"><br>
+        <button class="btn-login" (click)="validationInput()"> login </button><br>
+        <a   class="btn-register">register</a>
     </div>
 
 </div>
