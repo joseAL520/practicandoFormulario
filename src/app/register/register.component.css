@@ -1,0 +1,48 @@
+.formulario-box{
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+}
+
+
+.formulari-contain{
+    height: 500px;
+    width: 550px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 21px 11px 31px 4px rgba(0,0,0,0.27);
+    padding: 10px;
+}
+
+
+
+.formulari-contain-input{
+    margin: 10px;
+    background-color: rgb(236, 232, 232);
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+.btn-register{
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+    background-color: rgba(177, 186, 194, 0.658);
+    border: 0;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+.btn-register:hover{
+    background-color: rgba(192, 173, 173, 0.904) ;
+    color: black;
+}
