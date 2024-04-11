@@ -1,1 +1,40 @@
-<p>inventari works!</p>
+<div class="conteinr-menu-invetario">
+
+    <div class="conteinr-menu-invetario-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/6415/6415824.png" alt="user" class="img-logo"><br>
+        <p class="conteinr-menu-invetario-logo-text">Manage your actions and activities</p>
+    </div>
+    <div class="conteinr-menu-invetario-img" >
+        <p class="conteinr-menu-invetario-img-text">Welcome back</p>
+        <div class="conteinr-menu-invetario-img-alaing">
+            <img src="https://aishlatino.b-cdn.net/wp-content/uploads/2021/11/que-tipo-de-persona-te-gustaria-ser-730x411-SP.jpg" alt="user" class="img-user"><br>
+            <p class="conteinr-menu-invetario-img-name">Jose angel</p>
+        </div>
+        
+    </div>
+    <hr>
+
+    <div class="box-item-menu">
+        @for(item of menuItmes; track $index){
+            <a href="" class="box-item-menu-link"
+                [routerLink]="item.path">
+                <div class="box-item-menu-link-box">
+                    <img 
+                        src="https://img.myloview.es/posters/project-dashboard-linear-icon-template-color-editable-dashboard-in-laptop-symbol-vector-sign-isolated-on-white-background-simple-logo-vector-illustration-for-graphic-and-web-design-700-176181739.jpg" 
+                        alt=""
+                        class="box-item-menu-link-logo">
+                   <span class="box-item-menu-link-spantitle">{{item.title}}</span><br>
+                </div>
+                <!-- <span class="box-item-menu-link-span">{{item.path}} </span> -->
+           </a>
+        }
+    </div>
+
+</div>
+
+<div class="conteinr-invetario">
+    <router-outlet></router-outlet>
+</div>
+
+
+    
