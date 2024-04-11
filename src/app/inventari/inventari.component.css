@@ -13,12 +13,15 @@
     width: 191px;
     height: 72px;
     margin: 16px 0px 16px 0px;
-    padding: 0px 24px 0px 24px;
+    padding: 10px 0px 20px 30px;
 }
 
 .img-logo{
     width: 100px;
     height: 65px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
 }
 
 .conteinr-menu-invetario-logo-text{
@@ -33,7 +36,7 @@
 
 /* contenido del usuario */
 .conteinr-menu-invetario-img{
-    padding: 30px 14px 10px 25px;
+    padding: 20px 30px 5px 30px;;
 }
 
 .conteinr-menu-invetario-img-text{
@@ -42,14 +45,17 @@
 
 
 .conteinr-menu-invetario-img-alaing{
+    /* display: flex;
+    align-items: center; */
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
 .img-user{
     width: 52px;
     height: 52px;
-    padding: 10px;
+    padding: 5px 0px 5px 5px;
     border-radius: 50px;
 }
 
@@ -100,8 +106,6 @@
     
     background-color: rgb(31 65 177);
 }
-
-
 
 
 
