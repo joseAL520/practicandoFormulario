@@ -1,5 +1,5 @@
 .conteinr-menu-invetario{
-    position: absolute;
+    position: fixed;
     color: rgb(255, 255, 255);
     background-color: rgb(131, 131, 131);
     width: 16rem;
