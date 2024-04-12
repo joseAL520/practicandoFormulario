@@ -1,0 +1,37 @@
+.conteiner-grafic{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px 10px 10px 10px ;
+
+}
+
+
+.grafic-conteiner-ganacias{
+    width: 500px;
+    height: 350px;
+    background: green;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+.grafic-conteiner-perdida{
+    width: 300px;
+    height: 158px;
+    background: red;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+.grafic-conteiner-contactos{
+    width: 300px;
+    height: 158px;
+    background: orange;
+    padding: 10px;
+    margin-left: 15px;
+
+
+    position: absolute;
+    right: 65px;
+    bottom: 20px;
+}
