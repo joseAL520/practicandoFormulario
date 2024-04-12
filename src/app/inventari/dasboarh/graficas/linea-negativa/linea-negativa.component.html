@@ -1,0 +1,57 @@
+<canvas
+    baseChart
+    [data]="lineChartData"
+    [options]="lineChartOptions"
+    [type]="lineChartType"
+    (chartHover)="chartHovered($event)"
+    (chartClick)="chartClicked($event)"
+  ></canvas>
+  <table>
+    <tr>
+      @for (label of lineChartData.labels; track label) {
+        <!-- <th>{{ label }}</th> -->
+      }
+    </tr>
+
+
+    <!-- @for (d of lineChartData.datasets; track d; let i = $index) {
+      <tr [class]="'line-' + i">
+        @for (label of lineChartData.labels; track label; let j = $index) {
+          <td>
+            {{ d && d.data[j] }}
+          </td>
+        }
+      </tr>
+    } -->
+
+
+  </table>
+  <div class="button-row">
+    <button mat-button mat-raised-button color="primary" (click)="randomize()">
+      Randomize
+    </button>
+
+    <!-- <button mat-button mat-raised-button color="primary" (click)="pushOne()">
+      Push
+    </button>
+    <button
+      mat-button
+      mat-raised-button
+      color="primary"
+      (click)="changeColor()"
+    >
+      Recolor
+    </button>
+    <button mat-button mat-raised-button color="primary" (click)="hideOne()">
+      Toggle Series B
+    </button>
+    <button
+      mat-button
+      mat-raised-button
+      color="primary"
+      (click)="changeLabel()"
+    >
+      Change Label
+    </button> -->
+    
+  </div>
