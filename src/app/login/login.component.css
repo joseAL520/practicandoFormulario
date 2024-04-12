@@ -52,11 +52,11 @@ hr{
 }
 
 .btn-login:hover{
-    background-color: rgba(192, 173, 173, 0.904) ;
+    background-color: rgba(172, 172, 172, 0.705) ;
     color: black;
 }
 .btn-login:active{
-    background-color: rgba(255, 0, 0, 0.479) ;
+    background-color: rgba(172, 172, 172, 0.705) ;
     color: black;
 }
 
@@ -68,7 +68,7 @@ hr{
 
 .btn-register:active{
     border-radius: 10px;
-    background-color: rgba(255, 0, 0, 0.479) ;
+    background-color: rgba(172, 172, 172, 0.705) ;
     color: black;
 }
 
