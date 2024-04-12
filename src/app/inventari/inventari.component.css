@@ -1,5 +1,5 @@
 .conteinr-menu-invetario{
-    position: fixed;
+    position: absolute;
     color: rgb(203 213 225);
     background-color: rgb(17 24 39 );
     width: 16rem;
@@ -110,9 +110,9 @@
 
 
 /* fuera */
-.conteinr-invetario{
-    position: relative;
+/* .conteinr-invetario{
+    position: fixed;
     left: 260px;
-}
+} */
 
 
