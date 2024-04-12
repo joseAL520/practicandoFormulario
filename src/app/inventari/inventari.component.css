@@ -1,7 +1,7 @@
 .conteinr-menu-invetario{
     position: absolute;
-    color: rgb(203 213 225);
-    background-color: rgb(17 24 39 );
+    color: rgb(255, 255, 255);
+    background-color: rgb(131, 131, 131);
     width: 16rem;
     height: 100vh;
     top: 0px;
@@ -25,7 +25,7 @@
 }
 
 .conteinr-menu-invetario-logo-text{
-    color: rgb(100 116 139);
+    color: rgb(167, 167, 167);
     font-size: 0.875rem;
     line-height: 1.25rem;
     margin: 0;
@@ -40,7 +40,7 @@
 }
 
 .conteinr-menu-invetario-img-text{
-    color:  rgb(100 116 139);
+    color: rgb(167, 167, 167);
 }
 
 
@@ -57,6 +57,7 @@
     height: 52px;
     padding: 5px 0px 5px 5px;
     border-radius: 50px;
+    background: white;
 }
 
 .conteinr-menu-invetario-img-name{
@@ -67,7 +68,7 @@
 /* Menu  */
 
 .box-item-menu{
-    padding: 0px 24px 0px 24px;
+    padding: 0px 0px 0px 24px;
     margin: 10px;
     
 }
@@ -75,7 +76,7 @@
 .box-item-menu-link{
     display: grid;
     text-decoration: none;
-    border-bottom: 1px solid #5b5f8f8e;
+    border-bottom: 1px solid #00000030;
     padding: 16px 0px 3px 8px;
 }
 
@@ -91,7 +92,7 @@
 }
 
 .box-item-menu-link-spantitle{
-    color: rgb(255 255 255);
+    color: rgb(40 40 40 / 58%);
     font-size: 18px;
     padding: 0px 10px
 }
@@ -103,8 +104,7 @@
 }
 
 .box-item-menu-link:hover{
-    
-    background-color: rgb(31 65 177);
+    background-color: rgba(172, 172, 172, 0.705);
 }
 
 
