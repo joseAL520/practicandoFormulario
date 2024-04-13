@@ -7,12 +7,12 @@
 
 
 .formulari-contain{
-    height: 500px;
-    width: 550px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 21px 11px 31px 4px rgba(0,0,0,0.27);
     padding: 10px;
+    margin:  80px 10px 10px;
+    align-items: center;
 }
 
 
@@ -23,8 +23,7 @@
     font-size: 20px;
     border: 0;
     border-radius: 10px;
-    text-align: center;
-    padding: 10px;
+    
 }
 
 
@@ -43,6 +42,6 @@
 
 
 .btn-register:hover{
-    background-color: rgba(192, 173, 173, 0.904) ;
+    background-color: rgba(192, 192, 192, 0.877) ;
     color: black;
 }
