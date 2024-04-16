@@ -2,6 +2,7 @@
     display: grid;
     place-items: center;
     text-align: center;
+ 
 
 }
 
@@ -12,10 +13,21 @@
     box-shadow: 21px 11px 31px 4px rgba(0,0,0,0.27);
     padding: 10px;
     margin:  80px 10px 10px;
-    align-items: center;
+    width: 550px;
+    height: 430px;
 }
 
+.texto-registro{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: 15px;
+}
 
+hr{
+    height: 1px;
+    background-color: black;
+}
 
 .formulari-contain-input{
     margin: 10px;
@@ -44,4 +56,10 @@
 .btn-register:hover{
     background-color: rgba(192, 192, 192, 0.877) ;
     color: black;
+}
+
+
+
+.mensaje-validation{
+    color: red;
 }

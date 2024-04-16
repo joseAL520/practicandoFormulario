@@ -2,29 +2,122 @@
 
 <div class="formulario-box" >
 
-    <form class="formulari-contain" >
-        <br>
-        <span>Registrate</span>
-        <br>
-        <select name="" id="" class="formulari-contain-input">
+    <form  class="formulari-contain" [formGroup]="formularioGrupoRegistrar"  (submit)="enviar()" >
+
+
+        <span class="texto-registro">Registrate</span>
+        <hr>
+
+        <label for="">tipo de documento</label>
+        <select class="formulari-contain-input"
+                [ngStyle]="{'border': validaion('tipoDeIndentifiacion','required') ? '1px solid red' : 'none' }"  
+                formControlName="tipoDeIndentifiacion" >
             <option value="Cc">Cedula Ciudadania</option>
             <option value="Ce">Cedula Extrangera</option>
             <option value="Ps">Pasaporte</option>
         </select>
-        <input type="number" class="formulari-contain-input" placeholder="Numero Identifacion">
-        <input type="text"   class="formulari-contain-input" placeholder="Nombres Completos">
-        <input type="text"   class="formulari-contain-input" placeholder="Apellidos Completos">
-        <input type="number" class="formulari-contain-input" placeholder="Numero Celular">
-        <input type="text"   class="formulari-contain-input" placeholder="Direccion">
-        <input type="email"  class="formulari-contain-input" placeholder="correo Electronico">
-        <input type="password"  class="formulari-contain-input" placeholder="password">
-        <input type="password"  class="formulari-contain-input" placeholder="password">
+        <div class="mensaje-validation"  
+             *ngIf="validaion('tipoDeIndentifiacion','required')" >
+            campo requerido
+        </div>
+
+        <input 
+            type="text" 
+            class="formulari-contain-input" 
+            placeholder="Numero Identifacion"  
+            formControlName="numeroDeIndentifiacion"
+            [ngStyle]="{'border': validaion('numeroDeIndentifiacion','required') ? '1px solid red' : 'none' }"  
+            >
+        <div   
+            class="mensaje-validation"  
+            *ngIf="validaion('numeroDeIndentifiacion','required')">
+            campo requerido
+        </div>
+        <div 
+            class="mensaje-validation"
+            *ngIf="validaion('numeroDeIndentifiacion','minlength')" >
+            nececitas un minimo de 9 digitos
+        </div>
+        <br>
+
+        <input 
+            type="text"   
+            class="formulari-contain-input" 
+            placeholder="Nombres Completos"    
+            formControlName="nombres" 
+            [ngStyle]="{'border': validaion('nombres','required') ? '1px solid red' : 'none' }"  >
+        <div class="mensaje-validation"  *ngIf="validaion('nombres','required')" >
+            campo requerido
+        </div>
+
+        <input type="text"   class="formulari-contain-input" placeholder="Apellidos Completos"  formControlName="apellidos">
+
+      
+        <input 
+            type="text"  
+            class="formulari-contain-input" 
+            placeholder="Numero Celular"       
+            formControlName="numeroCelular"
+            [ngStyle]="{'border': validaion('numeroCelular','required') ? '1px solid red' : 'none' }" >
+        <div class="mensaje-validation"  *ngIf="validaion('numeroCelular','required')" >
+            campo requerido
+        </div>
+        <div 
+        class="mensaje-validation"
+        *ngIf="validaion('numeroCelular','minlength')" >
+         nececitas un minimo de 12 digitos
+        </div>
+
+        <input 
+            type="text"   
+            class="formulari-contain-input" 
+            placeholder="Direccion"            
+            formControlName="direccion"
+            [ngStyle]="{'border': validaion('direccion','required') ? '1px solid red' : 'none' }">
+        <div class="mensaje-validation"  *ngIf="validaion('direccion','required')" >
+            campo requerido
+        </div>
+
+        <input 
+            type="email"  
+            class="formulari-contain-input" 
+            placeholder="correo Electronico"   
+            formControlName="correo"
+            [ngStyle]="{'border': validaion('correo','required') || validaion('correo','email') ? '1px solid red' : 'none'}">
+        <div class="mensaje-validation"  *ngIf="validaion('correo','required')" >
+            campo requerido
+        </div>
+        <div class="mensaje-validation"  *ngIf="validaion('correo','email')" >
+            Formato No coincide
+        </div>
+        <br>
+
+        <input 
+            type="password"  
+            class="formulari-contain-input" 
+            placeholder="password"          
+            formControlName="contrasena"
+            [ngStyle]="{'border': validaion('contrasena','required') || passwordKey() ? '1px solid red' : 'none'}"
+            >
+        <input 
+            type="password"  
+            class="formulari-contain-input" 
+            placeholder="password"          
+            [ngStyle]="{'border': validaion('contrasenaValidation','required' ) || passwordKey() ? '1px solid red' : 'none'}"
+            formControlName="contrasenaValidation">
+       
+        <div class="mensaje-validation"  *ngIf=" validaion('contrasena','required') || validaion('contrasenaValidation','required') " >
+            campos de contrasenas  son requeridos
+        </div>
+        <div class="mensaje-validation"  *ngIf=" validaion('contrasena','minlength') || validaion('contrasenaValidation','minlength') " >
+            Nececitas un Minimo de 8 caracteres
+        </div>
+        
+        <div class="mensaje-validation" *ngIf="passwordKey()" >
+            las contrasenas no coincide
+        </div>
         <br>
         <button type="submit" class="btn-register"> Registrarte  </button>
+
     </form>
-    
-
 </div>
-
-
-<a routerLink="/login">Login</a>
