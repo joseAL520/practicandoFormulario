@@ -1,13 +1,37 @@
 <div class="box">
 
+  <form [formGroup]="formularioRegistrarte"  (submit)="validationInput()" >
+
     <div class="box-login">
         <br>
         <span>Login</span>
         <hr>
         <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="user" class="img-box"><br>
-        <input type="text"      class="box-login-input box-login-user"     [(ngModel)]="usario"   placeholder="User o gmail"><br>
-        <input type="password"  class="box-login-input box-login-Password"  [(ngModel)]="password" placeholder="password"><br>
-        <button class="btn-login" (click)="validationInput()"> login </button><br>
+        <input 
+            type="text"      
+            class="box-login-input box-login-user"     
+            placeholder="gmail"
+            formControlName="correo"
+            
+            >
+        <br>
+        <input 
+            type="password"  
+            class="box-login-input box-login-Password"  
+            placeholder="password"
+            formControlName="claveUsario"
+            >
+          <div class="mensaje-validation" *ngIf="mensaje" >
+            la clave o la contrasena no son correcta verifique.
+          </div>
+        <button 
+            class="btn-login" 
+            type="submit"> login 
+          </button><br>
+  
         <a routerLink="/register" class="btn-register">register</a>
     </div>
+  </form>
+    
+
 </div>
