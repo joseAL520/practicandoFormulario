@@ -1,7 +1,6 @@
 .conteiner{
     padding: 10px 20px 10px 10px;
     width:  650px;
-   
 }
 
 
@@ -9,6 +8,7 @@
     background: #fff;
     border-radius: 10px;
     height: 493px;
+    text-align: center;
     
 }
 
@@ -62,19 +62,22 @@ td{
     padding: 10px;
 }
 .nombre{
-    width: 250px;
-}
-
-.numero{
-    width: 100px
-}
-
-.correo{
     width: 100px;
 }
 
-.dirreccion{
-    width: 250px;
+.marca{
+    width: 100px
 }
 
+.categoria{
+    width: 100px;
+}
+
+.proovedor{
+    width: 100px;
+}
+
+.descripcion{
+    width: 250px;
+}
 

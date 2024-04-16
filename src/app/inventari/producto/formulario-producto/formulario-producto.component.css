@@ -29,6 +29,22 @@ label{
     text-align: center;
 }
 
+
+.continer-selector{
+    width: 360px;
+    height: 100px;
+}
+
+p{
+    margin: 10px;
+    text-align: left;
+}
+.select-input{
+    width: 175px;
+    top: -39px;
+    position: relative;
+}
+
 .input-identifiacacion{
     width: 340px;
 }

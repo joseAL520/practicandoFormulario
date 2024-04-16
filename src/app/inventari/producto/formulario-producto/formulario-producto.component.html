@@ -3,15 +3,27 @@
         <div class="contect-form">
         <label >Registrar Producto</label><br>
         <hr>
-        <input type="text" class="input-form input-identifiacacion " placeholder="Numero De Identifacacion">
-        <input type="text" class="input-form input-nombre" placeholder="Nombres">
-        <input type="text" class="input-form input-apellido" placeholder="Apellido">
+        <input type="text" class="input-form input-identifiacacion " placeholder="Identifacacion del producto">
+        <input type="text" class="input-form input-nombre" placeholder="Nombre del producto">
+        <input type="text" class="input-form input-apellido" placeholder="Marca">
         <hr>
-        <input type="text" class="input-form input-correo" placeholder="Correo">
-        <input type="text" class="input-form input-numero" placeholder="Numero">
+        <div class="continer-selector">
+            <p>Categoria</p>
+        <select name="" id="" class="input-form select-input " >
+            <option value="aseo">aseo</option>
+            <option value="casa">casa</option>
+            <option value="carro">carro</option>
+            <option value="electrodomestico">electrodomestico</option>
+        </select>
+        <p>Proveedor</p>
+        <select name="" id="" class="input-form  select-input" >
+            <option value="">Juan</option>
+            <option value="">Carlos</option>
+            <option value="">Mario</option>
+        </select>
+        </div>
         <hr>
-        <input type="text" class="input-form input-direccion" placeholder="Dirreccion">
-        <textarea placeholder="Detalle de la Dirreccion" class="descripcion-product"></textarea>
+        <textarea placeholder="descripcion del producto" class="descripcion-product" maxlength="50" ></textarea>
         <button type="submit" class="btn-registrar">Registrar</button>
         </div>
     </form>
