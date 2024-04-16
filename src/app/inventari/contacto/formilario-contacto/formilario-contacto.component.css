@@ -68,3 +68,11 @@ label{
     background-color: rgba(172, 172, 172, 0.705) ;
     color: black;
 }
+
+
+
+
+.mensaje-validator{
+    color: red;
+    font-size: 10px;
+}
