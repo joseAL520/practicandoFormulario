@@ -30,7 +30,7 @@ hr{
 }
 
 .formulari-contain-input{
-    margin: 10px;
+    margin: 8px;
     background-color: rgb(236, 232, 232);
     font-size: 20px;
     border: 0;
@@ -62,4 +62,5 @@ hr{
 
 .mensaje-validation{
     color: red;
+    font-size: 13px;
 }
