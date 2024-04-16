@@ -31,8 +31,7 @@ label{
 
 
 .continer-selector{
-    width: 360px;
-    height: 100px;
+    display: inline;
 }
 
 p{
@@ -83,4 +82,10 @@ p{
 .btn-registrar:hover{
     background-color: rgba(172, 172, 172, 0.705) ;
     color: black;
+}
+
+
+.mensaje-error{
+    color: red;
+    font-size: 10px;
 }
