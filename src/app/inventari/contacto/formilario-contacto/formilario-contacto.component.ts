@@ -2,21 +2,25 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter } from '@angular/core';
 import { Form, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Contacto } from '../interfaces/contacto.interfaces';
+import { ServicioContactoService } from '../servicio-contacto.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
   selector: 'inventario-contacto-formilario-contacto',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule,HttpClientModule],
   templateUrl: './formilario-contacto.component.html',
-  styleUrl: './formilario-contacto.component.css'
+  styleUrl: './formilario-contacto.component.css',
+  providers:[ServicioContactoService]
 })
 export class FormilarioContactoComponent {
 
   formularioContacto: FormGroup 
 
   constructor(
-      private form: FormBuilder
+      private form: FormBuilder,
+      private _servicioContacto: ServicioContactoService
   ){
     this.formularioContacto = this.form.group({
         numeroIdentfiacion: ['',[Validators.required, Validators.minLength(9)]],
@@ -37,14 +41,13 @@ export class FormilarioContactoComponent {
   addProduct(){
 
     if (this.formularioContacto.valid) {
-      const contactoData: Contacto = this.formularioContacto.value;
-      // Aquí puedes enviar el objeto 'contactoData' a tus servicios, por ejemplo
-      console.log(contactoData);
+      const contactoData = this.formularioContacto.value;
+      this._servicioContacto.registrarContacto(contactoData).subscribe()
       this.formularioContacto.reset()
     } else {
       alert('favo de llenar los campos');
     }
-
     }
+  
   }
 

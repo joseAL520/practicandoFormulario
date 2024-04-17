@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import { Contacto } from '../interfaces/contacto.interfaces';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServicioContactoService } from '../servicio-contacto.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'inventario-contacto-tabla-contacto',
@@ -12,7 +11,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   styleUrl: './tabla-contacto.component.css',
   providers:[ServicioContactoService]
 })
-export class TablaContactoComponent {
+export class TablaContactoComponent  implements OnInit{
 
   public listaContacto: any [] = []
 
