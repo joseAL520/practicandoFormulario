@@ -10,37 +10,18 @@
          <th>Nombre y Apellido</th>
          <th>Celular</th>
          <th>Correo.</th>
-         <th>Descripcion.</th>
+         <th>Direccion.</th>
        </tr>
     </thead>
     <tbody>
 
-      <tr>
-        <th scope="row" class="indice">1</th>
-        <td class="nombre" >Mark smit patans castro</td>
-        <td class="numero" >3126591312</td>
-        <td class="correo" >adasdaadaaaagmail.com</td>
-        <td class="dirreccion"> calle 12 # das  asd </td>
+      <tr *ngFor="let contacto of listaContacto; let i = index">
+        <th scope="row" class="indice">{{ i + 1 }}</th>
+        <td class="nombre">{{ contacto.nombre }} {{ contacto.apellido }}</td>
+        <td class="numero">{{ contacto.numero }}</td>
+        <td class="correo">{{ contacto.correo }}</td>
+        <td class="dirreccion">{{ contacto.direccion }}</td>
       </tr>
-
-      <tr>
-        <th scope="row" class="indice">1</th>
-        <td class="nombre" >Mark smit patans castro</td>
-        <td class="numero" >3126591312</td>
-        <td class="correo" >adasdaadaaaagmail.com</td>
-        <td class="dirreccion"> calle 12 # das  asd </td>
-      </tr>
-
-
-      <tr>
-        <th scope="row" class="indice">1</th>
-        <td class="nombre" >Mark smit patans castro</td>
-        <td class="numero" >3126591312</td>
-        <td class="correo" >adasdaadaaaagmail.com</td>
-        <td class="dirreccion"> calle 12 # das  asd </td>
-      </tr>
-
-    
 
     </tbody>
  </table>
